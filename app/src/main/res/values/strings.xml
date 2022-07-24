@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">task_furniture</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_title">Home</string>
+    <string name="favorite_title">Favorite</string>
+    <string name="cart_title">Cart</string>
+    <string name="orders_title">Orders</string>
+    <string name="profile_title">Profile</string>
+    <string name="home_search">بحث عن اثاث</string>
+    <string name="categories_title">اكتشف احسن الاثاث</string>
+    <string name="suggestion">يمكنك الاطلاع على جميع منتجاتنا داخل المعرض والطلب اونلاين والحصول على خصومات مميزة</string>
+    <string name="save_title">وفر حتى 50 %</string>
+    <string name="discounts_title">الخصومات</string>
+    <string name="nearby_title">معارض بالقرب منك</string>
+    <string name="offers_title">عروض التوفير</string>
+    <string name="order_now">اطلب الان</string>
+    <string name="offer_price">سعر العرض</string>
+</resources>

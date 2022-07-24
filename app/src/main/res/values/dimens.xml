@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="header_large_fontSize">18sp</dimen>
+    <dimen name="label_fontSize">14sp</dimen>
+    <dimen name="button_fontSize">16sp</dimen>
+
+</resources>

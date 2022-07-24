@@ -2,7 +2,7 @@ package com.Model.Pojo
 
 import com.google.gson.annotations.SerializedName
 
-data class Data(
+data class HomeData(
     @SerializedName("categories")
     val categories:List<Category>,
     @SerializedName("offers")

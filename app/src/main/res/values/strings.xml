@@ -16,4 +16,13 @@
     <string name="offers_title">عروض التوفير</string>
     <string name="order_now">اطلب الان</string>
     <string name="offer_price">سعر العرض</string>
+    <string name="login_title">تسجيل الدخول</string>
+    <string name="email_mobile">البريد الألكتروني او رقم الهاتف</string>
+    <string name="password">كلمة السر</string>
+    <string name="forget_password">نسيت كلمة المرور ؟</string>
+    <string name="or_login_another_way">او سجل عن طريق</string>
+    <string name="login_facebook">تسجيل عن طريق الفيسبوك</string>
+    <string name="login_gmail">تسجيل عن طريق جوجل</string>
+    <string name="register">تسجيل</string>
+    <string name="donot_have_account">ليس لديك حساب ؟ تسجيل</string>
 </resources>

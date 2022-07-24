@@ -1,7 +1,6 @@
 package com.UI.Views.Home.NavFragments.Home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,16 +8,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.Model.Pojo.BranchType
 import com.Model.Pojo.Category
 import com.Model.Pojo.Discount
 import com.UI.Adapters.BranchesTypesAdaper
 import com.UI.Adapters.CategoriesAdapter
 import com.UI.Adapters.DiscountsAdapter
-import com.example.task_furniture.R
 import com.example.task_furniture.databinding.FragmentHomeBinding
-import com.example.task_furniture.databinding.IncludeHomeCategoriesBinding
 
 class HomeFragment : Fragment() {
 
@@ -40,11 +36,11 @@ class HomeFragment : Fragment() {
         homeViewModel.getData()
         homeViewModel.data.observe(viewLifecycleOwner, Observer{ it->
 
-            showCategory(it.data.categories)
+            showCategory(it.homeData.categories)
             //
-            showDiscount(it.data.discounts)
+            showDiscount(it.homeData.discounts)
             //
-            showBranchTypes(it.data.branchTypes)
+            showBranchTypes(it.homeData.branchTypes)
 
 
         } )

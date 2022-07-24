@@ -3,16 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/drawable-mdpi/btn_normal_facebook.xml" value="0.111" />
         <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/drawable-v24/btn_normal.xml" value="0.164" />
         <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/drawable-xxhdpi/box_round_red.xml" value="0.1605" />
         <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/drawable/box_round_yellow.xml" value="0.1605" />
+        <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/drawable/btn_normal_google.xml" value="0.1605" />
         <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/drawable/btn_rounded.xml" value="0.164" />
         <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/drawable/ic_favorite.xml" value="0.1" />
         <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/drawable/ic_orders.xml" value="0.164" />
+        <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/drawable/line.xml" value="0.11" />
+        <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/drawable/nav_icon.xml" value="0.111" />
         <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/drawable/nav_text.xml" value="0.164" />
         <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/drawable/round_gray_box.xml" value="0.111" />
+        <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/drawable/toggle_password.xml" value="0.11" />
         <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/drawable/txt_search.xml" value="0.164" />
         <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/layout/activity_login.xml" value="0.631184407796102" />
         <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/layout/activity_main.xml" value="0.203125" />
         <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/layout/fragment_cart.xml" value="0.20416666666666666" />
         <entry key="..\:/work/projects/Mobile/task_furniture/app/app/src/main/res/layout/fragment_favorites.xml" value="0.1" />

@@ -66,6 +66,9 @@ dependencies {
 
     //Images
     implementation 'com.mikhaellopez:circularimageview:4.3.0'
+
+    //google sign in
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
     
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

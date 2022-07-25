@@ -15,6 +15,7 @@ class LoginViewModel:ViewModel() {
 
     val data= MutableLiveData<LoginResponse>()
     val loginRepository: LoginRepository = LoginRepository()
+    lateinit  var errorResonse:LoginResponse
 
     fun checkCredentionals(userName:String,password:String){
 
@@ -25,13 +26,13 @@ class LoginViewModel:ViewModel() {
                 if(response.isSuccessful) {
                     data.postValue(response.body())
                 }else{
-                    var errorResonse= LoginResponse(message = "error", status = false)
+                     errorResonse= LoginResponse(message = "error", status = false)
                     data.postValue(errorResonse)
                 }
             }
             override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
 
-              var errorResonse= LoginResponse(message = t.message.toString(), status = false)
+               errorResonse= LoginResponse(message = t.message.toString(), status = false)
                data.postValue(errorResonse)
             }
         })

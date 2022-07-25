@@ -3,6 +3,7 @@ package com.UI.Views.Authentication.Login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
@@ -18,7 +19,7 @@ import com.google.android.gms.tasks.Task
 
 class LoginActivity : AppCompatActivity() {
 
-
+    private  val TAG = "LoginActivityssss"
    lateinit var googleSignInOptions:GoogleSignInOptions
    lateinit var googleSignInCLient:GoogleSignInClient
    lateinit var binding: ActivityLoginBinding
@@ -46,8 +47,12 @@ class LoginActivity : AppCompatActivity() {
             if(requestCode==1000){
 
                var task: Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(data)
-                navigateToMainActivity()
-               task.result
+
+               if( task.isSuccessful==true){
+
+                   navigateToMainActivity()
+                }
+
             }
         } catch (e: Exception) {
         }

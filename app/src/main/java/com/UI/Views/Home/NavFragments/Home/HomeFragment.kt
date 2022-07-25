@@ -18,13 +18,14 @@ import com.example.task_furniture.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
-    val homeViewModel:HomeFragmentViewModel by lazy {
-       ViewModelProvider(this).get(HomeFragmentViewModel::class.java)
-    }
     lateinit var homeBinding: FragmentHomeBinding
     lateinit var categoriesAdapter: CategoriesAdapter
     lateinit var discountsAdapter: DiscountsAdapter
     lateinit var branchTypesAdapter: BranchesTypesAdaper
+
+    val homeViewModel:HomeFragmentViewModel by lazy {
+       ViewModelProvider(this).get(HomeFragmentViewModel::class.java)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,8 +33,14 @@ class HomeFragment : Fragment() {
     ): View? {
 
         homeBinding=FragmentHomeBinding.inflate(inflater,container,false)
-
         homeViewModel.getData()
+        observers()
+        return homeBinding.root
+
+    }
+
+    fun observers(){
+
         homeViewModel.data.observe(viewLifecycleOwner, Observer{ it->
 
             showCategory(it.homeData.categories)
@@ -44,15 +51,12 @@ class HomeFragment : Fragment() {
 
 
         } )
-
-        return homeBinding.root
-
     }
 
     fun showCategory( items:List<Category>){
 
         categoriesAdapter=CategoriesAdapter()
-        categoriesAdapter.items=items
+        categoriesAdapter.setItemsList(items)
         homeBinding.includeHomeCategoriesSection.rvCategories.adapter=categoriesAdapter
         homeBinding.includeHomeCategoriesSection.rvCategories.layoutManager=LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
 
@@ -61,7 +65,7 @@ class HomeFragment : Fragment() {
     fun showDiscount(items:List<Discount>){
 
         discountsAdapter= DiscountsAdapter()
-        discountsAdapter.items=items
+        discountsAdapter.setItemsList(items)
         homeBinding.includeHomeDiscountsSection.rvDiscounts.adapter=discountsAdapter
         homeBinding.includeHomeDiscountsSection.rvDiscounts.layoutManager=LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
 
@@ -70,7 +74,7 @@ class HomeFragment : Fragment() {
     fun showBranchTypes(items:List<BranchType>){
 
         branchTypesAdapter= BranchesTypesAdaper()
-        branchTypesAdapter.items=items
+        branchTypesAdapter.setItemsList(items)
         homeBinding.includeHomeBranchTypesSection.rvBranchesTypes.adapter=branchTypesAdapter
         homeBinding.includeHomeBranchTypesSection.rvBranchesTypes.layoutManager=LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
 

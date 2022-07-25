@@ -3,6 +3,8 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+apply from: '../dependencies.gradle'
+
 android {
     namespace 'com.example.task_furniture'
     compileSdk 32
@@ -46,29 +48,26 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.0'
 
-    //Glide
-    implementation 'com.github.bumptech.glide:glide:4.13.2'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+    //retrofit
+    implementation retrofitDependencies.retrofit
+    implementation retrofitDependencies.gson
 
-    def retrofit_version="2.9.0"
-    //Retrofit
-    implementation ("com.squareup.retrofit2:retrofit:$retrofit_version")
-    implementation ("com.squareup.retrofit2:converter-gson:$retrofit_version")
-    //
-    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
+    //httpOk
+    implementation httpOkDependencies.httpOK
 
+    //viewModel
+    implementation lifecycleDependencies.viewModel
+    implementation lifecycleDependencies.liveData
 
-    def lifecycle_version = "2.6.0-alpha01"
-    // ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
-    // LiveData
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
-
-    //Images
-    implementation 'com.mikhaellopez:circularimageview:4.3.0'
+    //glide
+    implementation glideDependencies.glide
+    implementation glideDependencies.annotation
+    
+    //circleImage
+    implementation circleImageDependencies.image
 
     //google sign in
-    implementation 'com.google.android.gms:play-services-auth:20.2.0'
+    implementation googleServicesDependencies.auth
     
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

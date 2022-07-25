@@ -13,19 +13,15 @@ import retrofit2.Response
 
 class HomeFragmentViewModel:ViewModel() {
 
-    var data=MutableLiveData<HomeResponse>()
+    val data=MutableLiveData<HomeResponse>()
     val homeRepository:HomeRepository=HomeRepository()
 
     fun getData(){
-
         homeRepository.getHomeInfo()?.enqueue(object : Callback<HomeResponse> {
-
             override fun onResponse(call: Call<HomeResponse>, response: Response<HomeResponse>) {
-
                 if(response.isSuccessful) {
                     data.postValue(response.body())
                 }
-
             }
             override fun onFailure(call: Call<HomeResponse>, t: Throwable) {
 

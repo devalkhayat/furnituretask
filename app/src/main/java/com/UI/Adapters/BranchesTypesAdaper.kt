@@ -26,7 +26,6 @@ class BranchesTypesAdaper (): RecyclerView.Adapter<BranchTypeHolderItem>() {
         else
             return 2
 
-
     }
 
     override fun onBindViewHolder(holder: BranchTypeHolderItem, position: Int) {
